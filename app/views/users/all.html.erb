@@ -1,0 +1,20 @@
+<div class="container">
+  <p>Please find the list of people coming below--</p>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Pizza Preference 1</th>
+      <th>Pizza Preference 2</th>
+      <th>Notes</th>
+    </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.pref1 %></td>
+      <td><%= user.pref2 %></td>
+      <td><%= user.notes %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>

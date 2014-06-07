@@ -1,0 +1,31 @@
+<div class="container">
+  <p>To RSVP, please fill out the form below--</p>
+
+  <%= form_for :user do |f| %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :pref1, "Pizza Topping Preference #1" %><br>
+    <%= f.text_field :pref1 %>
+  </p>
+
+   <p>
+    <%= f.label :pref2, "Pizza Topping Preference #2" %><br>
+    <%= f.text_field :pref2 %>
+  </p>
+
+   <p>
+    <%= f.label :notes, "Notes - i.e. dietary restrictions" %><br>
+    <%= f.text_area :notes %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+</div>
