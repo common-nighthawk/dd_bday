@@ -1,20 +1,22 @@
 <div class="container">
-  <p>Please find the list of people coming below--</p>
-
+  <p class='top'>Please find the RSVP list below--</p>
   <table>
     <tr>
       <th>Name</th>
-      <th>Pizza Preference 1</th>
-      <th>Pizza Preference 2</th>
+      <th>Preference #1</th>
+      <th>Preference #2</th>
       <th>Notes</th>
     </tr>
   <% @users.each do |user| %>
     <tr>
-      <td><%= user.name %></td>
-      <td><%= user.pref1 %></td>
-      <td><%= user.pref2 %></td>
-      <td><%= user.notes %></td>
+      <td class="shortrow"><%= user.name %></td>
+      <td class="shortrow"><%= user.pref1 %></td>
+      <td class="shortrow"><%= user.pref2 %></td>
+      <td class="longrow"><%= user.notes %></td>
+      <td class="shortrow"><a href='/users/<%= user.id %>/edit'>edit</a></td>
     </tr>
   <% end %>
   </table>
+
+  <p class='middle'><a href='/'>Home</a></p>
 </div>

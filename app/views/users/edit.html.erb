@@ -1,14 +1,15 @@
 <div class="container">
-  <p class='toptop'>To RSVP, please fill out the form below--</p>
 
-  <%= form_for :user do |f| %>
+<p class='toptop'>Please update any information below--</p>
+
+  <%= form_for :user, url: "/users/#{@user.id}", method: 'patch' do |f| %>
 
   <p>
     <%= f.label :name, "Name: (full name, please!)" %><br>
     <%= f.text_field :name, class: 'textbox' %>
   </p>
 
-  <p>
+    <p>
     <%= f.label :pref1, "Pizza Topping Preference #1:" %><br>
     <%= f.select :pref1, options_for_select([[''],
                                             ['Cheese'],
@@ -51,7 +52,7 @@
   </p>
 
   <p>
-    <%= f.submit "I'm in!", class: 'submitbutton'%>
+    <%= f.submit "Update!", class: 'submitbutton'%>
   </p>
 <% end %>
 
