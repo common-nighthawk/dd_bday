@@ -50,3 +50,5 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'faker'
 end
+
+gem 'rails_12factor', group: :production
