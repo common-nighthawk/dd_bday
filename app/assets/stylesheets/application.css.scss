@@ -1,9 +1,7 @@
 body {
-  /*background-image:url(mooning.png);*/
+/*  background-image: asset-data-url('mooning.png');*/
+  background-image: url(asset-path('mooning.png'));
   color:#666;
-/*  background-image: asset-url(mooning.png, image);
-  background-image: asset-url($asset, $asset-type);*/
-  background-image: asset-data-url('mooning.png');
 }
 
 .container {
