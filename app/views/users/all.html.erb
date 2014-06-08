@@ -2,10 +2,11 @@
   <p class='top'>Please find the RSVP list below--</p>
   <table>
     <tr>
-      <th>Name</th>
-      <th>Preference #1</th>
-      <th>Preference #2</th>
-      <th>Notes</th>
+      <th class="shortrow">Name</th>
+      <th class="shortrow">Preference #1</th>
+      <th class="shortrow">Preference #2</th>
+      <th class="longrow">Notes</th>
+      <th class="shortshortrow"></th>
     </tr>
   <% @users.each do |user| %>
     <tr>
@@ -13,7 +14,7 @@
       <td class="shortrow"><%= user.pref1 %></td>
       <td class="shortrow"><%= user.pref2 %></td>
       <td class="longrow"><%= user.notes %></td>
-      <td class="shortrow"><a href='/users/<%= user.id %>/edit'>edit</a></td>
+      <td class="shortshortrow"><a href='/users/<%= user.id %>/edit'>edit</a></td>
     </tr>
   <% end %>
   </table>
